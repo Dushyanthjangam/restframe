@@ -1,0 +1,20 @@
+{% if viewDeatils %}
+<table align="center" border="2">
+ <tr>
+     <th>  Employee Id</th>
+     <th>  Employee Name</th>
+     <th> Employee Salary </th>
+     <th> Employee Image</th>
+ </tr>
+ {% for x in viewDeatils %}
+     <tr>
+    <td> {{ x.employeeid }} </td>
+     <td> {{ x.empname }}</td>
+     <td> {{ x.empsalary }} </td>
+     <td> <img src="{{ x.empimg.url }}"></td> </tr>
+ {% endfor %}
+</table>
+    <table align="center">
+  <form action="/back/" >  <tr> <td> <button type="submit"> Back </button></td></tr> </form>
+    </table>
+{% endif %}
